@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row my-2">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <input type="text" name="search" class="search form-control" placeholder="Enter Keyword" #searchQuery >
+                        <button class="searchButton btn btn-lg" (click)='searchImages(searchQuery.value)' type="submit">Search Image</button>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div *ngFor="let image of images" class="mt-4">
+                    <div class="col-md-4">
+                        <img class="same-size image-container" src="{{ image.webformatURL }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<mat-card>
+    <mat-input-container>
+        <input type="text" name="search" class="search" matInput placeholder="Enter Keyword to Search" #searchQuery >
+    </mat-input-container>
+    <br>
+    <button mat-raised-button class="searchButton" (click)='searchImages(searchQuery.value)' type="button">Find Image</button>
+</mat-card>
+
+<div *ngIf="searching">
+    <mat-progress-bar mode='indeterminate'></mat-progress-bar>
+</div>
+
+<mat-card>
+    <h4 *ngIf="imagesFound" mat-subreade></h4>
+</mat-card>
+
+<div *ngFor="let image of images" class="image-container">
+    <img src="{{ image.webformatURL }}">
+    <p>Tags: {{ image.tags }}</p>
+    <p>User: {{ image.user }}</p>
+    <p>Comments: {{ image.comments }}</p>
+    <p>Likes: {{ image.likes }}</p>
+</div> -->
