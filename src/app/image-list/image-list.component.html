@@ -11,11 +11,11 @@
                 </div>
             </div>
             <div class="row">
-                <div *ngFor="let image of images" class="mt-4">
-                    <div class="col-md-4">
-                        <img class="same-size image-container" src="{{ image.webformatURL }}">
-                    </div>
-                </div>
+                <ul class="col-md-12 ul-li">
+                    <li *ngFor="let image of images" style="margin-left: 3px; margin-bottom: 3px;">
+                        <img class="" src="{{ image.webformatURL }}">
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
